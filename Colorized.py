@@ -223,51 +223,18 @@ Template = "\033["
 # Reset (BLACK)
 WBLACK_COLOR = "\033[0m"
 
+# Foreground 
 def TextBackground(color):
     print("%c[%dm" + ESC + 40+color)
 
-"""
-    static std::string IntToString(int a) {
-    	std::ostringstream temp;
-    	temp << a;
-    	return temp.str();
-    }
-"""
-
+# PrintWith(Colorize(type, color), "text")
 def PrintWith(color, text):
     print(color + text + WBLACK_COLOR)
 
-"""
-static void PrintWith(const char* color, const char* text) {
-   	std::cout << color << text << WBLACK_COLOR;
-    }
-"""
-
+# Colorize without Reset (WBLACK_COLOR)
 def PrintWhReset(color, text):
     print(color + text)
 
-"""
-
-    static void PrintWhReset(const char* color, const char* text) {
-    	std::cout << color << text;
-    }
-"""
-
+# Colorize
 def Colorize(type, color):
     return str(Template + str(type) + Semicolon + str(color) + Mark)
-
-"""
-    static std::string Colorize(int type, int color) {
-    	return Templatestr + IntToString(type) + Semicolonstr + IntToString(color) + Markstr;
-    }
-"""
-
-"""
-    static const char* ColorizeChar(int type, int color) {
-    	std::string conv(Templatestr + IntToString(type) + Semicolonstr + IntToString(color) + Markstr);
-    	std::cout << conv;
-    	return conv.c_str();
-    }
-
-}
-"""
