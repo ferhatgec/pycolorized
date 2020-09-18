@@ -42,3 +42,5 @@ PrintWith(Colorize(SDEFAULT, LIGHT_CYAN), "Hello world!")
 PrintWith(Colorize(SDEFAULT, LIGHT_WHITE), "Hello world!")
 
 BLACK_COLOR()
+
+input()
